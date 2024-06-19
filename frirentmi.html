@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2024년 1분기</title>
+        <link href="2024-2.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body>
+         <aside class="side-bar" style=" z-index: 5;">
+          <section class="side-bar__icon-box">
+            <section class="side-bar__icon-1">
+              <div></div>
+              <div></div>
+              <div></div>
+            </section>
+          </section>
+          <ul>
+            <li>
+                <a href="index.html">분기 선택</a>
+              </li>
+            <li>
+              <a href="#">2024-1분기</a>
+              <ul>
+                <li><a href="2024-1.html">분기 명작</a></li>
+                <li><a href="2024-1-1.html">수작</a></li>
+                <li><a href="2024-1-2.html">과제용</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="gizun.html">기준</a>
+            </li>
+          </ul>
+        </aside>
+
+
+
+     
+<!-- 첫 번째 Modal의 내용 -->
+                       
+
+          <img src="frieren.webp"  style=" float: left; margin-left: 7%; width: 30%; height: 13%;  " alt="...">
+          <span style="margin-top:20px;font-size:17px; color: rgb(45, 123, 241);">
+              <br>
+              <div style="font-size:37px;">&nbsp; 추천하는 이유</div>
+              <br>  
+              <br>&nbsp;&nbsp;  근래 별로 없는 정통판타지로 매드하우스에서 제작해였고
+              <br>&nbsp;&nbsp;  초신성처럼 나타난 실력있는 감독 사이토 케이이치로가 감독을 맡은 애니메이션이다.
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp;  여타 다른 작품들에서 작화와 함께 움직이는 바람같은 느낌의 
+              <br>&nbsp;&nbsp;  배경음악들을 작업한 에반콜의 배경음악은 좋은 작화와 배경을 잘 활용하는
+              <br>&nbsp;&nbsp;  감독의 연출이 합쳐져 압도당하는 느낌마저 준다
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp;  파스텔톤의 동글동글한 분위기의 색을 사용하면서도 
+              <br>&nbsp;&nbsp;  그림자들의 음영표현으로 작화에 입체감을 만들어 주었다
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp; 잔잔한 작품의 특성상 긴호흡을 이어가면서 지루해질수도 있지만 
+              <br>&nbsp;&nbsp; 그럴만한 타이밍에 간간히 개그요소를 집어넣어 지루함을 잡아주었다.
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp; 또한 주인공 프리렌의 성우인 타네자키 아츠미의 명연기가 있다
+              <br>&nbsp;&nbsp; 감정이 풍부하게 뿝어져 나오지만 그걸 절제하는 어려운 연기를 정말 잘표현해낸다.
+          </span>
+          <br>
+          <br>
+          <br>
+          <hr>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+              // Modal을 가져옵니다.
+              var modals = document.getElementsByClassName("modal");
+              // Modal을 띄우는 클래스 이름을 가져옵니다.
+              var btns = document.getElementsByClassName("btn");
+              // Modal을 닫는 close 클래스를 가져옵니다.
+              var spanes = document.getElementsByClassName("close");
+              var funcs = [];
+              
+              // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+              function Modal(num) {
+                return function() {
+                  // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+                  btns[num].onclick =  function() {
+                      modals[num].style.display = "block";
+                      console.log(num);
+                  };
+              
+                  // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+                  spanes[num].onclick = function() {
+                      modals[num].style.display = "none";
+                  };
+                };
+              }
+              
+              // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+              for(var i = 0; i < btns.length; i++) {
+                funcs[i] = Modal(i);
+              }
+              
+              // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+              for(var j = 0; j < btns.length; j++) {
+                funcs[j]();
+              }
+              
+              // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+              window.onclick = function(event) {
+                if (event.target.className == "modal") {
+                    event.target.style.display = "none";
+                }
+              };
+              
+            </script>
+    </body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2024년 2분기</title>
+        <link href="2024-2.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    </head>
+    <body>
+         <aside class="side-bar" style=" z-index: 5;">
+          <section class="side-bar__icon-box">
+            <section class="side-bar__icon-1">
+              <div></div>
+              <div></div>
+              <div></div>
+            </section>
+          </section>
+          <ul>
+            <li>
+                <a href="index.html">분기 선택</a>
+              </li>
+            <li>
+              <a href="#">2024-2분기</a>
+              <ul>
+                <li><a href="2024-2.html">분기 명작</a></li>
+                <li><a href="2024-2-1.html">수작</a></li>
+                <li><a href="2024-2-2.html">과제용</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="gizun.html">기준</a>
+            </li>
+          </ul>
+        </aside>
+
+
+
+     
+<!-- 첫 번째 Modal의 내용 -->
+                       
+
+          <img src="gbrmain.webp"  style=" float: left; margin-left: 7%; width: 30%; height: 13%;  " alt="...">
+          <span style="margin-top:20px;font-size:17px; color: rgb(45, 123, 241);">
+              <br>
+              <div style="font-size:37px;">&nbsp; 추천하는 이유</div>
+              <br>  
+              <br>&nbsp;&nbsp;  돈많이버는 회사인 토에이에서 10년넘게 쌓아온 3d노하우와 
+              <br>&nbsp;&nbsp;  막히지 않는 자본력으로 만든 밴드 애니메이션이다 
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp;  3d 공연씬이 있는 애니매이션 시리즈를 오랜기간 제작한 배태랑인
+              <br>&nbsp;&nbsp;  감독 사카이 카즈오와 그와 함께 합을 맞춰본 
+              <br>&nbsp;&nbsp;  각본가인 하나다 줏키가 제작에 참여하여 만든 애니메이션이다
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp;  한화의 구성이 정말 깔끔하게 갈등 그리고 해결을 보여주는데 
+              <br>&nbsp;&nbsp;  한화만에 풀어내는데에도 전개가 속도감 있음에도 불구하고 
+              <br>&nbsp;&nbsp;  탄탄하고 깔끔하게 전개를 마무리하지만 다음화가 궁금하게 만들어지게 한다.
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp; 근래 3d 애니메이션중 가장 움직임이 자연스럽고 표정묘사가 굉장하고 다양해 
+              <br>&nbsp;&nbsp; 움직이는것 만보아도 재미있게 한다.
+              <br>&nbsp;&nbsp; 3d연출이다 보니 화면의 전환이 자유롭고 역동적인데다 
+              <br>&nbsp;&nbsp; 거기에 좋은 연출이 더해지니 밴드 라이브의 입체감과 생동감을 끝내주게 보여준다.
+              <br>&nbsp; 
+              
+              <br>&nbsp;&nbsp; 또한 기존의 밴드물에 비해 갈등요소가 정말 밴드맨으로써 꽤나 진지한 편이고 
+              <br>&nbsp;&nbsp; 등장인물들도 제대로 갈등요소에 제대로 머리를 박으며 해결하려고 하는 모습을 보여준다
+          </span>
+          <br>
+          <br>
+          <br>
+          <hr>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+              // Modal을 가져옵니다.
+              var modals = document.getElementsByClassName("modal");
+              // Modal을 띄우는 클래스 이름을 가져옵니다.
+              var btns = document.getElementsByClassName("btn");
+              // Modal을 닫는 close 클래스를 가져옵니다.
+              var spanes = document.getElementsByClassName("close");
+              var funcs = [];
+              
+              // Modal을 띄우고 닫는 클릭 이벤트를 정의한 함수
+              function Modal(num) {
+                return function() {
+                  // 해당 클래스의 내용을 클릭하면 Modal을 띄웁니다.
+                  btns[num].onclick =  function() {
+                      modals[num].style.display = "block";
+                      console.log(num);
+                  };
+              
+                  // <span> 태그(X 버튼)를 클릭하면 Modal이 닫습니다.
+                  spanes[num].onclick = function() {
+                      modals[num].style.display = "none";
+                  };
+                };
+              }
+              
+              // 원하는 Modal 수만큼 Modal 함수를 호출해서 funcs 함수에 정의합니다.
+              for(var i = 0; i < btns.length; i++) {
+                funcs[i] = Modal(i);
+              }
+              
+              // 원하는 Modal 수만큼 funcs 함수를 호출합니다.
+              for(var j = 0; j < btns.length; j++) {
+                funcs[j]();
+              }
+              
+              // Modal 영역 밖을 클릭하면 Modal을 닫습니다.
+              window.onclick = function(event) {
+                if (event.target.className == "modal") {
+                    event.target.style.display = "none";
+                }
+              };
+              
+            </script>
+    </body>
+
+</html>
